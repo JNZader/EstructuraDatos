@@ -14,7 +14,8 @@ número dentro de los 12 meses del año.
 4) Calcule descuentos por verano del 15%
 5) En diciembre no hay descuento
  */
-int main() {
+int main()
+{
 
     float precio, descuento, precioFinal;
     int mes;
@@ -31,29 +32,30 @@ int main() {
 
     cout << "mes seleccionado: " << mes << endl;
 
-    switch (mes) {
-        case 1:
-        case 2:
-            descuento = precio * 0.15;
-            break;
-        case 3:
-        case 4:
-        case 5:
-            descuento = precio * 0.35;
-            break;
-        case 6:
-        case 7:
-        case 8:
-            descuento = precio * 0.4;
-            break;
-        case 9:
-        case 10:
-        case 11:
-            descuento = precio * 0.25;
-            break;
-        case 12:
-            descuento = 0;
-            break;
+   switch (mes)
+    {
+    case 1:
+    case 2:
+        descuento = precio * 0.15;
+        break;
+    case 3:
+    case 4:
+    case 5:
+        descuento = precio * 0.35;
+        break;
+    case 6:
+    case 7:
+    case 8:
+        descuento = precio * 0.4;
+        break;
+    case 9:
+    case 10:
+    case 11:
+        descuento = precio * 0.25;
+        break;
+    case 12:
+        descuento = 0;
+        break;
     }
 
     precioFinal = precio - descuento;
