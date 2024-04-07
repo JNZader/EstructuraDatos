@@ -30,6 +30,11 @@ int main()
     {
     case 'A':
     case 'a':
+        if (x == 0)
+        {
+            cout << 0 << endl;
+            break;
+        }
         cout << "Ingrese la potencia y: ";
         cin >> y;
         cout << "Resultado: " << pow(x, y) << endl;
