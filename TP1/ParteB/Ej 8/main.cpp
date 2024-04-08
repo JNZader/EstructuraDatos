@@ -6,15 +6,11 @@ b) Alumnos que aprobaron al menos un examen.
 c)Alumnos que aprobaron únicamente el último examen.
  */
 
-#include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+int main() {
 
     return 0;
 }
-

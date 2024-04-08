@@ -4,15 +4,11 @@ sin utilizar la función pow. Donde num será una base generada de forma aleator
  y exp será ingresada por teclado no mayor a 5. Usar las librerías stdlib.h y cmath.
  */
 
-#include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+int main() {
 
     return 0;
 }
-

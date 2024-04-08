@@ -4,15 +4,11 @@ Ejercicio 13: Hacer un programa que muestre la serie Fibonacci,
 n=13, nos muestra la salida: Fibonacci(13)= 1 1 2 3 5 8 13
  */
 
-#include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+int main() {
 
     return 0;
 }
-
