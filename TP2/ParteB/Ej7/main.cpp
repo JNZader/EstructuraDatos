@@ -1,11 +1,12 @@
+/*
+ * Ejercicio 7: Desarrollar un programa que determine si una matriz es simétrica o no. Una 
+matriz es simétrica si es cuadrada y si es igual a su matriz transpuesta.
+ */
 #include <iostream>
 
 using namespace std;
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+int main() {
 
     return 0;
 }

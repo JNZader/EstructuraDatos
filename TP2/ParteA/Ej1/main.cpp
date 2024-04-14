@@ -20,7 +20,7 @@ int main() {
 
 
     while(i<cantNum){
-        cout<<"ingrese el numero del vector "<<i+1<<endl;
+        cout<<"ingrese el numero "<<i+1<<" del vector "<<endl;
         cin>>vector[i];
         suma+=vector[i];
         i++;
