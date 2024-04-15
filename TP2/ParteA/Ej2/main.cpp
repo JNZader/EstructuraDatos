@@ -12,7 +12,7 @@ int main()
     int cantNum;
     int suma = 1;
 
-    cout << "ingrese el numero de elementos a ingresar" << endl;
+    cout << "ingrese el numero de elementos a guardar" << endl;
     cin >> cantNum;
 
     int vector[cantNum];
