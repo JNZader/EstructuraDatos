@@ -1,5 +1,23 @@
 /*
  * Ejercicio 6: Realice un programa que calcule A-suma y B-producto de 2 matrices cuadradas de 3x3.
+ 
+A = 
+    ⎛ a  d  g ⎞
+    ⎜ b  e  h ⎟
+    ⎝ c  f  i ⎠
+
+B = 
+    ⎛ x  w  t ⎞
+    ⎜ y  v  s ⎟
+    ⎝ z  u  r ⎠
+
+El resultado de la multiplicación C = A × B sería:
+
+C = 
+    ⎛ (ax + bw + ct)   (dx + ew + ft)   (gx + hw + it) ⎞
+    ⎜ (ay + bv + cs)   (dy + ev + fs)   (gy + hv + is) ⎟
+    ⎝ (az + bu + cr)   (dz + eu + fr)   (gz + hu + ir) ⎠
+
  */
 #include <iostream>
 
