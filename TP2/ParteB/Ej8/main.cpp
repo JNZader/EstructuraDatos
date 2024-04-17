@@ -27,13 +27,13 @@ int main()
         cin >> get<0>(tmp[i]);
         cout << endl;
 
-        cout << "ingrese la temperatura del 1er mes " << endl;
+        cout << "ingrese la temperatura media del 1er mes " << endl;
         cin >> get<1>(tmp[i]);
 
-        cout << "ingrese la temperatura del 2do mes " << endl;
+        cout << "ingrese la temperatura media del 2do mes " << endl;
         cin >> get<2>(tmp[i]);
 
-        cout << "ingrese la temperatura del 3er mes " << endl;
+        cout << "ingrese la temperatura media del 3er mes " << endl;
         cin >> get<3>(tmp[i]);
 
         double promedio = (get<1>(tmp[i]) + get<2>(tmp[i]) + get<3>(tmp[i])) / 3;
