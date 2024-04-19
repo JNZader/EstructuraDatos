@@ -36,7 +36,7 @@ int main()
             cin >> matrizA[i][j];
         }
     }
-
+    
     cout << "Ingrese los elementos de la matriz B:" << endl;
     for (int i = 0; i < 3; i++)
     {

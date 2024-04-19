@@ -18,19 +18,23 @@ int main() {
     {
         for (int j = 0; j < 2; j++)
         {
-            matriz[i][j] = 1 + rand() % (100);
+            matriz[i][j] = 1 + rand() % (99);
+            cout << matriz[i][j] << " ";
         }
+        cout << endl;
     }
-
+cout << endl;
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             matriz2[i][j] = matriz[i][j] + 1;
+            cout << matriz2[i][j] << " ";
         }
+        cout << endl;
     }
-
-
+cout << endl;
+/*
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 2; j++)
@@ -50,7 +54,7 @@ int main() {
         cout << endl;
     }
     cout << endl;
-
+*/
     return 0;
 }
 
