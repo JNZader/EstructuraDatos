@@ -1,4 +1,8 @@
-/* 13. El programa de Anses pide N, y carga un arreglo de estructuras los datos de N jubilados (nroCarnet, nombre y apellido, 
+/* 
+
+Santino
+
+13. El programa de Anses pide N, y carga un arreglo de estructuras los datos de N jubilados (nroCarnet, nombre y apellido, 
 dni, edad, aportes, montoPensión). Luego que imprima: A- los datos del Jubilado con mayor y menor pensión. B- Aquellos 
 Jubilados con entre 20 y 30 años de aporte. C- El número de carnet de los Jubilados con pensión inferior a $90000.
  */

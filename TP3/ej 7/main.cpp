@@ -1,4 +1,7 @@
 /*
+
+Javier
+
 7. Cree una estructura profesor, con nombre, cargo, materia, y carga horaria. Declare 2 profesores con estos
 valores (fuera del main): Ej: Profe. Cristina, Titular, Gestión de datos, 20hs. Ej2: Fabiana. Jefa TP, Matemática,
 15hs. El registro profesor debe incluir a otro registro materia. Luego en el main, muestre ambos profesores

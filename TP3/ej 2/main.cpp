@@ -1,4 +1,8 @@
-/*Pevaco. Escribe un programa que pida tres cadenas al usuario, y muestre el resultado de concatenar las dos primeras letras
+/*
+
+Cristian
+
+Pevaco. Escribe un programa que pida tres cadenas al usuario, y muestre el resultado de concatenar las dos primeras letras
  de las cadenas introducidas, pero además que nos indique si las dos primeras cadenas son iguales.
 Ejemplo: el usuario introduce como cadenas perro, vaca y cocodrilo. El programa mostrará por pantalla: 
 “El resultado de concatenar las dos primeras letras de las cadenas es: “pevaco”. La primera cadena, perro, 

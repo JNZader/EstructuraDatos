@@ -1,4 +1,7 @@
 /*
+
+Javier
+
 11. Hacer una estructura llamada Corredor, en la cual se tendrán los siguientes campos: Nombre, edad, sexo, club,
 pedir datos al usuario para un corredor, y asignarle una Categoría de competición (use strcpy para copiar a la
 variable) según sea su categoría: 1 - Juvenil menor (hasta 18 años) 2- Señor menor (hasta 40 años) 3- Veterano

@@ -1,10 +1,15 @@
 /*
+
+Javier
+
+
 1. Escribe un programa que pida tres nombres animales al usuario, y muestre su letra capital y longitud (strchr y strlen). Ejemplo: el usuario introduce como cadenas león, jirafa, y elefante. El programa mostrará por pantalla.
 El número de letras para león es 4, letra ‘L’, para jirafa es 6, letra ‘J’; y para elefante es 8, con letra ‘E’.
 Pasar la letra a MAYÚSCULA.
  */
 #include <iostream>
 #include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -23,12 +28,18 @@ int main()
     {
         letraMayuscula = toupper(nombre[i][0]);
 
-        cout << "El nombre " << nombre[i] << " tiene " << strlen(nombre[i]) << " letras, y la primera letra en mayuscula es: " << letraMayuscula << endl;
+        const char* cstr = nombre[i].c_str();
+
+        cout << "El nombre " << nombre[i] << " tiene " << strlen(cstr) << " letras, y la primera letra en mayuscula es: " << letraMayuscula << endl;
     }
     return 0;
 }
 
 /**
+ * 
+ * Cristian
+ * 
+ * 
 Escribe un programa que pida tres nombres animales al usuario, y muestre su letra capital y longitud (strchr y strlen).
 
 

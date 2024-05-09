@@ -1,4 +1,8 @@
-/*Declare una estructura llamada struct DiscoCompacto, que guarde el título, Artista, numero de canciones, precio, año de lanzamiento.
+/*
+
+Cristian
+
+Declare una estructura llamada struct DiscoCompacto, que guarde el título, Artista, numero de canciones, precio, año de lanzamiento.
  Use typedef para declarar el alias del struct como CD.
 -      Declare 3 variables de tipo DiscoCompacto, dos globales y una local al main.
 -      Iterar usando strlen para mostrar el nombre de cada artista, solo si la longitud del artista, si es mayor a 10 letras. –
@@ -35,7 +39,7 @@ void ingresarDatosCD(CD *disco)
     printf("Ingrese el precio: ");
     scanf("%f", &disco->precio);
 
-    printf("Ingrese el año de lanzamiento: ");
+    printf("Ingrese el anio de lanzamiento: ");
     scanf("%d", &disco->ano_lanzamiento);
 
     // limpiar el búfer del teclado después de leer los datos numéricos

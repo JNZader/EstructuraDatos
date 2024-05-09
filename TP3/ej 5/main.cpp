@@ -1,4 +1,7 @@
 /*
+
+Javier
+
 5. Se deben ingresa un par de frases por teclado, luego determine las mismas coinciden hasta la 5ta letra
 (strncasecmp). Ejemplo: “La Vida es Bella” y “la VIRTUD de los grandes” coinciden. Nos dirá si además de
 coincidir, contiene la subcadena “la” en ambas frases, solo una de ellas, o no la contiene. (use strstr).
@@ -16,10 +19,10 @@ int main()
     string frase2;
 
     cout << "Ingrese la primera frase: ";
-    cin >> frase1;
+    getline(cin, frase1);
 
     cout << "Ingrese la segunda frase: ";
-    cin >> frase2;
+    getline(cin, frase2);
 
     if (strncasecmp(frase1.c_str(), frase2.c_str(), BYTES) == 0)
     {
@@ -48,7 +51,12 @@ int main()
     }
     return 0;
 }
-/*Se deben ingresa un par de frases por teclado, luego determine las mismas coinciden hasta la 5ta letra (strncasecmp). 
+/*
+
+Cristian
+
+
+Se deben ingresa un par de frases por teclado, luego determine las mismas coinciden hasta la 5ta letra (strncasecmp). 
 Ejemplo: “La Vida es Bella” y “la VIRTUD de los grandes” coinciden. Nos dirá si además de coincidir, 
 contiene la subcadena “la” en ambas frases, solo una de ellas, o no la contiene. (use strstr).
 
