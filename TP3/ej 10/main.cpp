@@ -17,17 +17,17 @@ struct Libro {
     Color color;
 };
 
-int masssssin() {
+int main() {
     Libro libros[3];
 
     // Registro de datos de los libros
     for (int i = 0; i < 3; ++i) {
         cout << "Ingrese los datos del libro " << i + 1 << endl;
-        cout << "Título: ";
+        cout << "Titulo: ";
         getline(cin, libros[i].titulo);
         cout << "Autor: ";
         getline(cin, libros[i].autor);
-        cout << "Año: ";
+        cout << "Anio: ";
         cin >> libros[i].ano;
         cout << "Color (0 = Rojo, 1 = Verde, 2 = Azul): ";
         int color;
@@ -39,9 +39,9 @@ int masssssin() {
     // Mostrar libros según su color
     for (int i = 0; i < 3; ++i) {
         cout << "Libro " << i + 1 << ": " << endl;
-        cout << "Título: " << libros[i].titulo << endl;
+        cout << "Titulo: " << libros[i].titulo << endl;
         cout << "Autor: " << libros[i].autor << endl;
-        cout << "Año: " << libros[i].ano << endl;
+        cout << "Anio: " << libros[i].ano << endl;
         cout << "Color: ";
         switch (libros[i].color) {
         case ROJO:
@@ -54,7 +54,7 @@ int masssssin() {
             cout << "Azul";
             break;
         default:
-            cout << "Color no válido";
+            cout << "Color no valido";
         }
         cout << endl << endl;
     }
