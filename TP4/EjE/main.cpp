@@ -1,50 +1,32 @@
+/**
+ *
+ * E. Crear un procedimiento amigosDeMario que contenga un arreglo de personajes
+ *  {Luigi, Donkey, Yoshi} y reciba un puntero pt a string*,
+ * nos muestre los personajes incrementando pt++
+ *
+ */
 #include <iostream>
+#include <string>
+
 using namespace std;
 
+void amigosDeMario(string **pt)
+{
+	string amigos[] = {"Luigi", "Donkey", "Yoshi"};
+	int n = sizeof(amigos) / sizeof(string);
 
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
+	for (int i = 0; i < n; i++)
+	{
+		**pt = amigos[i];
+		cout << **pt << endl;
+		(*pt)++;
 	}
 }
 
-
-	int suma=0;
-void calcularSuma(int vector[],int tam){
-
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
-	}
-	
-}
-
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
-
-
-
-
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+int main()
+{
+	string *puntero = new string;
+	amigosDeMario(&puntero);
+	delete puntero;
+	return 0;
 }

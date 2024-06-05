@@ -1,50 +1,69 @@
 #include <iostream>
+#include <string>
+#include <limits>
+
 using namespace std;
 
-
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
-	}
+int contarPalabras(const string& frase) {
+    int contador = 0;
+    size_t pos = 0;
+    while (true) {
+        pos = frase.find(" ", pos);
+        if (pos == string::npos)
+            break;
+        contador++;
+        pos++;
+    }
+    if (!frase.empty())
+        contador++;
+    return contador;
 }
 
-
-	int suma=0;
-void calcularSuma(int vector[],int tam){
-
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
-	}
-	
+int contarOcurrencias(const string& frase, const string& palabra) {
+    int contador = 0;
+    size_t pos = 0;
+    while ((pos = frase.find(palabra, pos)) != string::npos) {
+        contador++;
+        pos += palabra.length();
+    }
+    return contador;
 }
 
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
+int main() {
+    int opcion;
+    string frase, palabra, input;
 
+    do {
+        cout << "Menu:" << endl;
+        cout << "1. Contar palabras en una frase" << endl;
+        cout << "2. Contar ocurrencias de una palabra en una frase" << endl;
+        cout << "3. Salir" << endl;
+        cout << "Ingrese una opcion: ";
 
+        getline(cin, input);
+        opcion = stoi(input);
 
+        switch (opcion) {
+            case 1:
+                cout << "Ingrese una frase: ";
+                getline(cin, frase);
+                cout << "La frase tiene " << contarPalabras(frase) << " palabras." << endl;
+                break;
+            case 2:
+                cout << "Ingrese una frase: ";
+                getline(cin, frase);
+                cout << "Ingrese una palabra: ";
+                cin >> palabra;
+                cout << "La palabra \"" << palabra << "\" se encuentra " << contarOcurrencias(frase, palabra) << " veces en la frase." << endl;
+                break;
+            case 3:
+                cout << "Saliendo del programa..." << endl;
+                break;
+            default:
+                cout << "Opcion invalida. Intente nuevamente." << endl;
+        }
+        cout << endl;
+    } while (opcion != 3);
 
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+    return 0;
 }

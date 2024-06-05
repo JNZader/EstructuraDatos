@@ -1,50 +1,26 @@
+/**
+ *
+ * 14. Haga un programa en C++ que devuelva la parte fraccionaria de cualquier número introducido por el usuario.
+ * Ejemplo, si introducís el número 256.879, debería desplegarse el número 0.879.
+ *
+ */
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
-
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
-	}
+double obtenerParteFraccionaria(double numero)
+{
+	return numero - static_cast<int>(numero);
 }
 
+int main()
+{
+	double numero;
+	cout << "Ingrese un numero(utilice punto para la parte decimal): ";
+	cin >> numero;
 
-	int suma=0;
-void calcularSuma(int vector[],int tam){
+	cout << "La parte fraccionaria es: " << obtenerParteFraccionaria(numero) << endl;
 
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
-	}
-	
-}
-
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
-
-
-
-
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+	return 0;
 }

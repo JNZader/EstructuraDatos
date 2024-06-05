@@ -1,50 +1,42 @@
+/**
+ *
+ * 15. Escriba una función llamada maximo() que devuelva el valor máximo de tres argumentos
+ *  que se transmitan a la función cuando sea llamada. Suponga que los 3 argumentos serán del tipo float.
+ *
+ */
+
 #include <iostream>
+
 using namespace std;
 
+float maximo(float num1, float num2, float num3)
+{
+	float max = num1; // asumimos el primer num es el maximo
 
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
+	// comparamos el segundo y tercero con el maximo actual
+	if (num2 > max)
+	{
+		max = num2;
 	}
-}
 
-
-	int suma=0;
-void calcularSuma(int vector[],int tam){
-
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
+	if (num3 > max)
+	{
+		max = num3;
 	}
-	
+
+	return max;
 }
 
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
+int main()
+{
+	float a, b, c;
 
+	cout << "Ingrese tres numeros: ";
+	cin >> a >> b >> c;
 
+	float maximoValor = maximo(a, b, c);
 
+	cout << "El valor maximo es: " << maximoValor <<endl;
 
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+	return 0;
 }

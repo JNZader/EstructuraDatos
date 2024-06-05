@@ -1,50 +1,42 @@
+/*Escriba una función nombrada funpot() que eleve un número entero que se le transmita a una potencia en número entero positivo
+y despliegue el resultado. El número entero positivo deberá ser el segundo valor transmitido a la función.*/
+
 #include <iostream>
 using namespace std;
 
+// funcion que eleva numero a una potencia entera positiva
+void funpot(int base, int exponente)
+{
+	int resultado = 1;
 
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
+	for (int i = 0; i < exponente; i++)
+	{
+		resultado *= base;
 	}
+
+	cout << "El resultado de " << base << " elevado a la potencia " << exponente << " es: " << resultado << endl;
 }
 
+int main()
+{
+	int numero, potencia;
 
-	int suma=0;
-void calcularSuma(int vector[],int tam){
+	cout << "Ingrese el numero base: ";
+	cin >> numero;
 
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
+	cout << "Ingrese la potencia (entero positivo): ";
+	cin >> potencia;
 
-	}		
+	// verifica que potencia sea entero positivo
+	if (potencia >= 0)
+	{
+
+		funpot(numero, potencia);
 	}
-	
-}
+	else
+	{
+		cout << "La potencia debe ser un entero positivo." << endl;
+	}
 
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
-
-
-
-
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+	return 0;
 }

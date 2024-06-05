@@ -1,50 +1,38 @@
+/**
+ * 
+ * 18. Realice una función que reciba un número y devuelva el factorial del mismo. 
+ * El factorial de un número: es el producto del número por todos sus antecesores hasta 1. Ejemplos:
+ * ▪ Factorial de 0 es 1 (por definición) Se denota 0!=1
+ * ▪ Factorial de 1 es 1 Se denota 1!=1
+ * ▪ Factorial de 4= 4*3*2*1 Se denota 4!=24
+ * ▪ Factorial de 10= 10*9*8*7*6*5*4*3*2*1 Se denota 10!= 3.628.800
+ * 
+*/
+
 #include <iostream>
-using namespace std;
 
-
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
+int factorial(int numero)
+{
+	if (numero == 0)
+	{
+		return 1;
 	}
-}
-
-
-	int suma=0;
-void calcularSuma(int vector[],int tam){
-
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
+	int resultado = 1;
+	for (int i = 1; i <= numero; ++i)
+	{
+		resultado *= i;
 	}
-	
+	return resultado;
 }
 
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
+int main()
+{
+	int numero;
+	std::cout << "Ingrese un número para calcular su factorial: ";
+	std::cin >> numero;
 
+	int resultado = factorial(numero);
+	std::cout << "El factorial de " << numero << " es " << resultado << std::endl;
 
-
-
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+	return 0;
 }

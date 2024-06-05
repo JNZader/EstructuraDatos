@@ -1,50 +1,32 @@
+/*Hacer una función que reciba un puntero y compruebe si el número es par o impar,
+y señalar la posición de memoria donde se está guardando el número*/
+
 #include <iostream>
 using namespace std;
 
-
-
-
-int vector[100],tam;
-void cargar(){
-	cout<<"ingrese el tamano del vector ";
-	cin>>tam;
-	
-	for(int i=0;i<tam;i++){
-		cout<<"ingrese un numero ";
-		cin>>vector[i];
+// verifica si un numero es par o impar y muestra su direccion de memoria
+void verificarParImpar(int *numero)
+{
+	if (*numero % 2 == 0)
+	{
+		cout << "El numero " << *numero << " es par." << endl;
 	}
-}
-
-
-	int suma=0;
-void calcularSuma(int vector[],int tam){
-
-	for(int i=0;i<tam;i++){
-		
-	if(vector[i]%2==0){
-	
-	
-	suma+=vector[i];
-	
-
-	}		
+	else
+	{
+		cout << "El numero " << *numero << " es impar." << endl;
 	}
-	
+	cout << "La direccion de memoria donde se guarda el numero es: " << numero << endl;
 }
 
-void muestra(int suma){
-	
-	
-		cout<<"la suma de los numeros pares es "<<suma<<endl;
-}
+int main()
+{
+	int numero;
 
+	cout << "Ingrese un numero: ";
+	cin >> numero;
 
+	// llama a  función verificarParImpar pasando la posicion de memoria de la variable numero
+	verificarParImpar(&numero);
 
-
-int main(){
-	cargar();
-	calcularSuma(vector,tam);
-	muestra(suma);
-	
-	
+	return 0;
 }

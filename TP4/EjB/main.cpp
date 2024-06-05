@@ -1,3 +1,11 @@
+/**
+ * 
+ * B. Paso por referencia de un puntero: 
+ * Crea una función que reciba un puntero a un entero 
+ * y modifique el valor al  que apunta.
+ * 
+*/
+
 #include <stdio.h>
 
 void pasoPorReferencia(int **referencia)
@@ -7,7 +15,8 @@ void pasoPorReferencia(int **referencia)
     *referencia = cambio;
 }
 
-int main(){
+int main()
+{
     int *a, n = 13;
 
     a = &n;
