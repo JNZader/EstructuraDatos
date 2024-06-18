@@ -8,17 +8,17 @@ const int N = 6; // Tamaño de la pila (ajustar según necesidad)
 
 struct Pila
 {
-private:           // Interfaz privada: encapsulamiento
-    int tope = -1; // Valor inválido para el tope (inicialmente vacía)
+private:
+    int tope = -1; // Valor invalido para el tope (inicialmente vacia)
     int datos[N];  // Arreglo para almacenar los elementos de la pila
 
-public: // Interfaz pública
+public:
     void push(int elemento)
     {
         if (!pilaLlena())
-        {                           // Verifica si hay espacio disponible
-            tope++;                 // Sube el tope al siguiente índice libre
-            datos[tope] = elemento; // Almacena el elemento en la posición del tope
+        {
+            tope++;
+            datos[tope] = elemento;
             cout << "Push del elemento " << elemento << " en la posicion " << tope << endl;
         }
         else
@@ -30,22 +30,22 @@ public: // Interfaz pública
     int verTope()
     {
         if (tope != -1)
-        {                       // Verifica si la pila está vacía
-            return datos[tope]; // Devuelve el elemento en el tope
+        {
+            return datos[tope];
         }
         else
         {
             cout << "La pila esta vacia, no hay tope!" << endl;
-            return -1; // Valor de error si la pila está vacía
+            return -1;
         }
     }
 
     void pop()
     {
         if (tope != -1)
-        { // Verifica si la pila está vacía
+        {
             cout << "Elemento removido: " << datos[tope] << endl;
-            tope--; // Baja el tope al índice anterior
+            tope--;
         }
         else
         {
@@ -55,16 +55,16 @@ public: // Interfaz pública
 
     bool pilaVacia()
     {
-        return tope == -1; // Si el tope es -1, la pila está vacía
+        return tope == -1;
     }
 
     bool pilaLlena()
     {
-        return tope == N - 1; // Si el tope es igual al tamaño máximo, la pila está llena
+        return tope == N - 1;
     }
 
     int getTope()
-    { // Función para obtener el valor del tope
+    {
         if (tope != -1)
         {
             return datos[tope];
@@ -72,7 +72,7 @@ public: // Interfaz pública
         else
         {
             cout << "La pila esta vacia, no hay tope!" << endl;
-            return -1; // Valor de error si la pila está vacía
+            return -1;
         }
     }
 
@@ -102,5 +102,61 @@ public: // Interfaz pública
         }
     }
 };
+
+// Funcion para invertir con una pila auxiliar
+void InvierteConAux(Pila &A, Pila &B, Pila &aux)
+{
+    while (!A.pilaVacia())
+    {
+        aux.push(A.verTope());
+        A.pop();
+    }
+
+    while (!aux.pilaVacia())
+    {
+        B.push(aux.verTope());
+        aux.pop();
+    }
+}
+
+// Funcion recursiva para invertir sin una pila auxiliar
+void InvierteSinAux(Pila &A, Pila &B)
+{
+    if (!A.pilaVacia())
+    {
+        int temp = A.verTope();
+        A.pop();
+        InvierteSinAux(A, B);
+        B.push(temp);
+    }
+}
+
+// Función para reemplazar un valor en la pila
+void reemplazarElemento(Pila &A, int elementoBuscado, int nuevoElemento)
+{
+    Pila auxiliar;
+
+    while (!A.pilaVacia())
+    {
+        int valor = A.verTope();
+
+        if (valor == elementoBuscado)
+        {
+            A.pop();
+            A.push(nuevoElemento);
+        }
+        else
+        {
+            auxiliar.push(valor);
+            A.pop();
+        }
+    }
+
+    while (!auxiliar.pilaVacia())
+    {
+        A.push(auxiliar.verTope());
+        auxiliar.pop();
+    }
+}
 
 #endif
